@@ -1,9 +1,21 @@
 public class StringHelper {
-    public static String splitTextIntoLines(String text, String pattern) {
-        return text.replaceAll(pattern, "\n");
+    private String text;
+
+    public StringHelper(String text) {
+        this.text = text;
     }
 
-    public static String convertStringToPattern(String text, String pattern, String replacement) {
-        return text.replaceAll(pattern, replacement);
+    public StringHelper splitTextIntoLines(String pattern) {
+        text = text.replaceAll(pattern, "\n");
+        return this;
+    }
+
+    public StringHelper convertStringToPattern(String pattern, String replacement) {
+        text = text.replaceAll(pattern, replacement);
+        return this;
+    }
+
+    public String getText() {
+        return text;
     }
 }
