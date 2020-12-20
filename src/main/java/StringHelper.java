@@ -10,7 +10,7 @@ public class StringHelper {
         return this;
     }
 
-    public StringHelper deleteAllByPattern(String pattern, String replacement) {
+    public StringHelper replaceAllByPattern(String pattern, String replacement) {
         text = text.replaceAll(pattern, replacement);
         return this;
     }
